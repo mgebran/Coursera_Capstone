@@ -1,0 +1,22 @@
+In this report I am trying to predict the severity of potential accident in a specic region. In fact, the severity of the accident depends on several parameters such as the time of day, the weather, the location of the second car, the type of the car, the number of person inside the car, etc. All these factors affect the severity of the accident. To do so, I will try first to detect the most important factors that play a role in determining the severity of the accident and then use them with the existing data to built a model that can predict for specific conditions (features), the probability of the severity of an accident if it occurs.
+
+
+To reach the desired objective of this project, I need first to pinpoint the attributes that affect the most and/or are somehow correlated with the labeled target (ie. SEVERITYCODE.1 in the data). These parameters will be the following:
+ADDRTYPE: Collision address type
+PERSONCOUNT: The total number of people involved in the collision
+INATTENTIONIND: Whether or not collision was due to inattention
+WEATHER: The weather condition
+ROADCOND: The condition of the road
+LIGHTCOND: The light condition
+SPEEDING: If speeding was a factor in the collision
+First, a correlation table will be used to confirm the importance of these parameters. Second, a supervised machine learning algorithm will be used for classification purposes. The choice of the Classification algorith is based on the fact that the dataset contains only two possible parameters for the SEVERITYCODE.1 parameter (1 or 2). These parameters map the property damage or an injury. 
+The algorithms that will be tested will be the following:
+- KNN
+- Decision Tree
+- SVM
+- Logistic Regression
+In each case, the error tests (Jaccard, F1, logloss) will be verified and the most accurate model will be selected.
+The data contain 194673 entries. These entries will be divided among training and testing datasets with a percentage of 70% and 30%, respectively.
+
+
+
